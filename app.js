@@ -1,10 +1,12 @@
 const chalk = require('chalk')
 const notes = require('./notes')
+const command = process.argv[2]
 
-const msg = notes()
+if (command === 'add') {
+    return console.log(notes())
+}else{
+    return console.log('No notes added..')
+}
 
-console.log(msg)
 
 console.log(chalk.green('Success..'))
-console.log(chalk.green.bold('Hello world!'));
-console.log(chalk.blue.bgRed.bold('Hello world!'));
