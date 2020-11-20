@@ -19,6 +19,7 @@
   "homepage": "https://github.com/bilalahmad147/repo-for-node-js#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "validator": "^13.1.17"
+    "validator": "^13.1.17",
+    "yargs": "^16.1.1"
   }
 }

@@ -1,12 +1,39 @@
 const chalk = require('chalk')
 const notes = require('./notes')
-const command = process.argv[2]
+const yargs = require('yargs')
 
-if (command === 'add') {
-    return console.log(notes())
-}else{
-    return console.log('No notes added..')
-}
+yargs.command({
+    command: 'add',
+    describe: 'add new notes',
+    handler: function(){
+        console.log('added a new note..')
+    }
+})
+
+yargs.command({
+    command: 'remove',
+    describe: 'remove notes',
+    handler: function(){
+        console.log('Removing notes..')
+    }
+})
+
+yargs.command({
+    command: 'list',
+    describe: 'list notes',
+    handler: function(){
+        console.log('listed notes..')
+    }
+})
+
+yargs.command({
+    command: 'read',
+    describe: 'read notes',
+    handler: function(){
+        console.log('Reading notes..')
+    }
+})
 
 
-console.log(chalk.green('Success..'))
+console.log(yargs.argv)
+
